@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang = "ja">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes">
+		<title>農地検索システム</title>
+		<style type="text/css">
+			map { height: 100%; }
+			html, body { 
+				height: 100%;
+				margin: 10; 
+				padding: 0; 
+				}
+		</style>
+	</head>
+	
+	<body>
+		<h1>農地検索システム</h1>
+		<p>あなたのお探しの農地，見つかります．</p>
+		
+		<form>
+		<input type="text", id="textbox", name="address", placeholder="農地名から検索">
+		<input type="submit", id="send", name="sendbutton", value="検索"><br>
+		</form>
+		
+		<button id="drag">地図を操作する・コメントを登録する</button>
+		<button id="draw">農地を登録する</button>
+		
+		<div id="map" style="width:1020px; height:600px"></div>
+		
+		<form id="submit"></form>
+		<form id="comment"></form>
+		
+		<script type="text/javascript" async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAZYFnAWunMwX49VEXji8SmwpvB07YkxrM&callback=initMap&libraries=drawing"></script>
+		
+		<script type="text/javascript" src="googleMaps.js"></script>
+		
+		<script type="text/javascript" src="mapsEvent.js"></script>
+		
+	</body>
+</html>
